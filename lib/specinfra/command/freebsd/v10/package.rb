@@ -1,5 +1,6 @@
 class Specinfra::Command::Freebsd::V10::Package < Specinfra::Command::Freebsd::Base::Package
   class << self
+
     def check_is_installed(package, version=nil)
       if version
         "pkg query %v #{escape(package)} | grep -- #{escape(version)}"
